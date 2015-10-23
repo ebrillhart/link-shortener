@@ -11,7 +11,7 @@
 		<div class="row center-align">
 			<div class="col s6 offset-s3">
 				<p class="truncate">Long Link: <a href="<%= item.url %>" id="links"><%= item.url %></a></p>
-				<p>Shortened Link: <a href="<%= "/" + item.hash %>" id="links"><%= "/" + item.hash %></a></p>
+				<p>Shortened Link: <a href="<%= "/" + item.hash %>" id="links"><%= "http://link-shortener-ebrillhart.herokuapp.com/" + item.hash %></a></p>
 				<p id="click">Click count: <%= item.clicks %></p>
 			</div>	
 		</div>	
