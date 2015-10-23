@@ -19,6 +19,10 @@ app.get("/", function(req, res) {
 	res.render("index");
 });
 
+app.get("/error", function(req, res) {
+	res.render("error");
+});
+
 app.get("/links/", function(req, res) {
 	var urls = db.url.findAll({order: 'clicks DESC'}).then(function(urls) {
 		var myArray = urls;
@@ -29,8 +33,8 @@ app.get("/links/", function(req, res) {
 app.get("/:hash", function(req, res) {
 	var hashid = req.params.hash;
 	db.url.find({where: {hash: hashid}}).then(function(url) {
-		var clickCount = url.clicks;
-		clickCount++;
+		url.clicks++;
+		console.log(url.clicks);
 		url.save().then(function(url) {
 			var finalUrl = url.url;
   			res.redirect(finalUrl);
@@ -43,10 +47,6 @@ app.get("/links/:idx", function(req, res) {
 	res.render("links/show", {hash: id});
 });
 
-app.get("/error", function(req, res) {
-	res.render("error");
-});
-
 app.use("/links", require("./controllers/links"));
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

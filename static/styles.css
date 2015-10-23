@@ -8,6 +8,15 @@ form input {
 	color: black;
 }
 
+input[type=text] {
+	border-bottom: 1px solid gray;
+}
+
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #9575cd;
+     box-shadow: 0 1px 0 0 #000;
+}     
+
 body {
 	background: url(http://forums.androidcentral.com/attachments/wallpapers-ringtones-themes/41444d1350284817t-seeking-minimalist-wallpapers-uploadfromtaptalk1350284832582.jpg) no-repeat center center fixed;
 	background-size: cover;
@@ -23,6 +32,14 @@ body {
 }
 
 .container#title {
+	background: rgba(255, 255, 255, 0.25);
+	padding: 50px 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 50%;
+}
+
+.container#error {
 	background: rgba(255, 255, 255, 0.25);
 	padding: 50px 60px;
 	margin-top: 30px;
@@ -56,4 +73,9 @@ p a:hover {
 
 :-ms-input-placeholder {  
    color: #90a4ae;  
+}
+
+h1, h5 {
+	letter-spacing: 5px;
+	font-weight: lighter;
 }
