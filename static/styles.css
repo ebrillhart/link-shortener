@@ -39,5 +39,21 @@ p a {
 }
 
 p a:hover {
-	font-size: 1.25em;
+	font-size: 1.1em;
+}
+
+::-webkit-input-placeholder {
+   color: #90a4ae;
+}
+
+:-moz-placeholder {
+   color: #90a4ae;  
+}
+
+::-moz-placeholder {
+   color: #90a4ae;  
+}
+
+:-ms-input-placeholder {  
+   color: #90a4ae;  
 }

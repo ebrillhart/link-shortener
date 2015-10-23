@@ -9,8 +9,11 @@
 
 	<% myArray.forEach(function(item) { %>
 		<div class="row center-align">
-			<p><a href="<%= '/' + item.hash %>" id="links"><%= "localhost:3000/" + item.hash %></a></p>
-			<p id="click">Click count: <%= item.clicks %></p>
+			<div class="col s6 offset-s3">
+				<p class="truncate">Long Link: <a href="<%= item.url %>" id="links"><%= item.url %></a></p>
+				<p>Shortened Link: <a href="<%= '/' + item.hash %>" id="links"><%= "localhost:3000/" + item.hash %></a></p>
+				<p id="click">Click count: <%= item.clicks %></p>
+			</div>	
 		</div>	
 	<% }); %>
 

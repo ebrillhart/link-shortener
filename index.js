@@ -20,7 +20,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/links/", function(req, res) {
-	var urls = db.url.findAll().then(function(urls) {
+	var urls = db.url.findAll({order: 'clicks DESC'}).then(function(urls) {
 		var myArray = urls;
 		res.render("links/index", {myArray});
 	});
@@ -29,8 +29,12 @@ app.get("/links/", function(req, res) {
 app.get("/:hash", function(req, res) {
 	var hashid = req.params.hash;
 	db.url.find({where: {hash: hashid}}).then(function(url) {
-  		var finalUrl = url.url;
-  		res.redirect(finalUrl);
+		var clickCount = url.clicks;
+		clickCount++;
+		url.save().then(function(url) {
+			var finalUrl = url.url;
+  			res.redirect(finalUrl);
+		});
 	});
 });
 
