@@ -1,7 +1,16 @@
-<h1>Here are all of the links</h1>
+<div class="container">
+	<div class="row">
+		<h1 class="center-align">All User-Shortened Links</h1>
+	</div>	
 
-<% myArray.forEach(function(item) { %>
-	<p><%= "localhost:300/" + item.hash %></p>
-<% }); %>
+	<div class="row center-align" id="home-btn">
+		<a href="/"><button class="btn">Back to Homepage</button></a>
+	</div>	
 
-<a href="/">Back to homepage</a>
+	<% myArray.forEach(function(item) { %>
+		<div class="row center-align">
+			<p><%= "localhost:300/" + item.hash %></p>
+		</div>	
+	<% }); %>
+
+</div>

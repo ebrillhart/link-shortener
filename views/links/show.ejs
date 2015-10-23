@@ -1,7 +1,18 @@
-<h1>Here is your specific link</h1>
+<div class="container">
+	<div class="row center-align">
+		<h1>Here's your link!</h1>
+		<h5>Copy and paste to use and share.</h5>
+	</div>
 
-<p><%= "localhost:3000/" + hash %></p>
+	<div class="row center-align">
+		<p><%= "localhost:3000/" + hash %></p>
+	</div>
 
-<a href="/">Back to homepage</a>
-<a href="/links/">See all links</a>
+	<div class="row">
+		<div class="col s8 offset-s2">
+			<a href="/" class="left"><button class="btn">Back to Homepage</button></a>
+			<a href="/links/" class="right"><button class="btn">See All Links</button></a>
+		</div>
+	</div>
+</div>
 
