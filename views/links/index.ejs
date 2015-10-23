@@ -9,7 +9,8 @@
 
 	<% myArray.forEach(function(item) { %>
 		<div class="row center-align">
-			<p><%= "localhost:300/" + item.hash %></p>
+			<p><a href="<%= '/' + item.hash %>" id="links"><%= "localhost:3000/" + item.hash %></a></p>
+			<p id="click">Click count: <%= item.clicks %></p>
 		</div>	
 	<% }); %>
 

@@ -33,3 +33,11 @@ body {
 p {
 	color: black;
 }
+
+p a {
+	color: black;
+}
+
+p a:hover {
+	font-size: 1.25em;
+}
