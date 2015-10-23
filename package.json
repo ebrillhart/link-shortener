@@ -20,6 +20,10 @@
     "body-parser": "^1.14.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
-    "express-ejs-layouts": "^2.0.0"
+    "express-ejs-layouts": "^2.0.0",
+    "hashids": "^1.0.2",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.12.2"
   }
 }
