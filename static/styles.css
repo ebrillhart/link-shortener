@@ -5,4 +5,31 @@
 
 form input {
 	text-align: center;
+	color: black;
+}
+
+body {
+	background: url(http://forums.androidcentral.com/attachments/wallpapers-ringtones-themes/41444d1350284817t-seeking-minimalist-wallpapers-uploadfromtaptalk1350284832582.jpg) no-repeat center center fixed;
+	background-size: cover;
+	color: #9575cd;
+}
+
+.container {
+	background: rgba(255, 255, 255, 0.40);
+	padding: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 5%;
+}
+
+.container#title {
+	background: rgba(255, 255, 255, 0.25);
+	padding: 50px 60px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 50%;
+}
+
+p {
+	color: black;
 }
